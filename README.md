@@ -1,23 +1,23 @@
-📘 Agentic RAG — End-to-End Retrieval Augmented Generation Pipeline
+****📘 Agentic RAG — End-to-End Retrieval Augmented Generation Pipeline********
 
 Welcome to Agentic RAG, a lightweight but fully functional Retrieval-Augmented Generation system built using LangChain, FAISS, and HuggingFace Transformers.
 This project demonstrates how to take any PDF, chunk it, embed it, store it in a vector database, and then query it using an LLM that retrieves real context before answering.
 
 This repo is ideal for anyone learning RAG, prototyping retrieval systems, or testing local LLM workflows.
 
-🌟 Key Features
-🔍 PDF → Text Loader
+****🌟 Key Features****
+**🔍 PDF → Text Loader**
 
 Extracts clean text from PDFs using PyPDFLoader.
 (Example PDF included: agnetic_rag.pdf)
 
-🧩 Semantic Chunking
+**🧩 Semantic Chunking**
 
 Breaks long documents into manageable chunks using
 RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200).
 
-🧠 Embeddings + Cache
-
+**🧠 Embeddings + Cache
+**
 Embeddings are created using:
 
 sentence-transformers/all-MiniLM-L6-v2
@@ -25,17 +25,17 @@ sentence-transformers/all-MiniLM-L6-v2
 
 Includes an in-memory cache so repeated chunk embeddings don’t get recomputed.
 
-📡 FAISS Vector Store
+**📡 FAISS Vector Store**
 
 Stores all document embeddings for efficient similarity search.
 Search retrieves top-k relevant chunks (k=2 by default).
 
-🗣️ RetrievalQA with GPT-2
+**🗣️ RetrievalQA with GPT-2**
 
 Uses HuggingFace’s GPT-2 via a text-generation pipeline for answer creation.
 Integrates a simple prompt template and conversation memory.
 
-📝 Conversational Memory
+**📝 Conversational Memory**
 
 Uses LangChain’s
 
@@ -43,8 +43,8 @@ ConversationBufferMemory
 
 
 to maintain chat continuity.
-
-📂 Project Structure
+**
+📂 Project Structure**
 agentic_rag/
 │
 ├── data/
@@ -57,7 +57,7 @@ agentic_rag/
 │
 └── requirements.txt             # Optional (I can generate this if you want)
 
-🚀 How It Works (Pipeline Overview)
+**🚀 How It Works (Pipeline Overview)******
 1. Install dependencies
 %pip install faiss-cpu langchain sentence-transformers transformers pypdf
 
