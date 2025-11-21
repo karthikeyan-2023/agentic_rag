@@ -25,10 +25,3 @@ This project loads a PDF, chunks it, embeds the text, stores embeddings in FAISS
 
 ---
 
-## 📁 Project Structure
-agentic_rag/
-│── data/
-│ └── agnetic_rag.pdf
-│── notebooks/
-│ └── agentic_rag.ipynb
-│── README.md
