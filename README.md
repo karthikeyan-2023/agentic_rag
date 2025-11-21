@@ -1,59 +1,34 @@
-Agentic RAG
+# Agentic RAG
 
-A simple Retrieval-Augmented Generation (RAG) pipeline built using LangChain, FAISS, and HuggingFace Transformers.
-It loads a PDF, chunks it, embeds it, stores embeddings in FAISS, and answers questions using GPT-2 with retrieved context.
+A simple Retrieval-Augmented Generation (RAG) pipeline built using **LangChain**, **FAISS**, and **HuggingFace Transformers**.  
+This project loads a PDF, chunks it, embeds the text, stores embeddings in FAISS, and answers questions using GPT-2 with retrieved context.
 
-Features
+---
 
-PDF text extraction
+## 📌 Features
+- PDF text extraction  
+- Semantic text chunking  
+- Embeddings using MiniLM  
+- FAISS vector search  
+- GPT-2 based answer generation  
+- Simple RetrievalQA chain with memory  
 
-Semantic text chunking
+---
 
-MiniLM embeddings
+## 🚀 How It Works
+1. Load PDF  
+2. Split PDF into chunks  
+3. Generate embeddings (cached)  
+4. Store embeddings in FAISS  
+5. Retrieve similar chunks  
+6. Generate final answer using GPT-2  
 
-FAISS vector search
+---
 
-GPT-2 answer generation
-
-Simple RetrievalQA chain with memory
-
-How It Works
-
-Load PDF
-
-Split into chunks
-
-Embed chunks (cached)
-
-Store in FAISS
-
-Retrieve top-k similar chunks
-
-Generate answer using GPT-2
-
-Project Structure
+## 📁 Project Structure
 agentic_rag/
 │── data/
-│    └── agnetic_rag.pdf
+│ └── agnetic_rag.pdf
 │── notebooks/
-│    └── agentic_rag.ipynb
+│ └── agentic_rag.ipynb
 │── README.md
-
-Setup
-git clone https://github.com/karthikeyan-2023/agentic_rag.git
-cd agentic_rag
-pip install -r requirements.txt
-
-Usage
-
-Open the notebook:
-
-notebooks/agentic_rag.ipynb
-
-
-Run cells to load the PDF, build the FAISS store, and query the model.
-
-Example Query
-query = "Phases of NLP"
-response = qa_chain.invoke({"query": query})
-print(response["result"])
